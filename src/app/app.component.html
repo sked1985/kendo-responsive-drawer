@@ -5,25 +5,15 @@
       </button>
   </kendo-appbar-section>
   <kendo-appbar-section>
-      <h1 class="title">Responsive</h1>
+      <h1 class="title">Menu</h1>
   </kendo-appbar-section>
   <kendo-appbar-spacer [width]="'32px'"></kendo-appbar-spacer>
   <kendo-appbar-spacer></kendo-appbar-spacer>
-  <kendo-appbar-section class="actions">
-      <!-- <kendo-badge-container>
-          <button class="k-button k-button-clear">
-              <kendo-icon [name]="'bell'"></kendo-icon>
-          </button>
-          <kendo-badge [shape]="'dot'" [themeColor]="'warning'" [size]="'small'" [position]="'inside'"></kendo-badge>
-      </kendo-badge-container> -->
-      <span class="k-appbar-separator"></span>
-  </kendo-appbar-section>
-
   <kendo-appbar-section>
       <kendo-avatar [imageSrc]="kendokaAvatar" [shape]="'circle'" [width]="'26px'" [height]="'26px'"></kendo-avatar>
   </kendo-appbar-section>
 </kendo-appbar>
-<kendo-drawer-container style="height: 90vh;">
+<kendo-drawer-container>
   <kendo-drawer #drawer
       [items]="items"
       [mode]="'push'"
@@ -33,15 +23,20 @@
       id="drawer" [ngClass]="active ? 'active' : ''">
       <ng-template kendoDrawerFooterTemplate>
         <div class="expand">
-          <button kendoButton (click)="drawer.toggle()">
-            <span *ngIf="drawer.expanded"><<</span>
-            <span *ngIf="!drawer.expanded">>></span>
+          <button kendoButton class="k-button k-button-outline" (click)="drawer.toggle()">
+            <span class="k-icon k-i-arrow-chevron-right" *ngIf="!drawer.expanded"></span>
+            <span class="k-icon k-i-arrow-chevron-left" *ngIf="drawer.expanded"></span>
           </button>
-          {{drawer[0]}}
         </div>
     </ng-template>
   </kendo-drawer>
   <kendo-drawer-content>
-      App content
+      <main>
+        <div class="box1">Content 1</div>
+        <div class="box2">Content 2</div>
+        <div class="box3">Content 3</div>
+        <div class="box4">Content 4</div>
+        <footer>made by BMcGetti</footer>
+      </main>
   </kendo-drawer-content>
 </kendo-drawer-container>
