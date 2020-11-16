@@ -1,0 +1,62 @@
+body {
+    background: #adadb1;
+    margin: 0;
+    padding: 0;
+}
+kendo-appbar {
+  margin: 0px;
+}
+.title {
+    font-size: 18px;
+    margin: 0;
+}
+kendo-badge-container {
+    margin-right: 8px;
+}
+ul {
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+li {
+    margin: 0 9px;
+}
+li:hover {
+    cursor: pointer;
+    color: #D6002F;
+}
+.actions .k-button {
+    padding: 0;
+}
+.expand {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    width:400px;
+    
+    left:30%;
+}
+.menu-btn {
+    display: none;
+}
+@media screen and (max-width: 760px) {
+  #drawer {
+    position: absolute;
+    left: 0px;
+    height: 90vh;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
+  }
+  .active {
+    transform: translateX(0%) !important;
+  }
+  .menu-btn {
+    display: block;
+    }
+}
